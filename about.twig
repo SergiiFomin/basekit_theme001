@@ -1,0 +1,219 @@
+{% extends "layout.twig" %}
+
+  {% block content %}
+
+  <div class="global"> 
+    <header>
+        <div class="container">
+             <div class="navbar navbar_ clearfix">
+                <div class="navbar-inner">      
+                      <div class="clearfix">
+                            <h1 class="brand">{{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}</h1>
+                            <div class="nav-collapse nav-collapse_ collapse">
+                              {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+                            </div>                                                                                                                
+                      </div>
+                 </div>  
+             </div>
+        </div>        
+    </header>
+
+    <div class="container padBot">
+        <div class="row">
+            <section class="span12 margBot">
+                    <div class="row">
+                         <article class="span4">
+                            {{widget('content', 'whoweare_title', {content: '<h3>who we are</h3>', lines: 'all'})|raw}}                  
+                            <div class="thumb-pad4">
+                                <div class="thumbnail">
+                                    <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page2_pic1.jpg'), 'alt': 'page2_pic1', 'fileName': 'page2_pic1.jpg', 'fileSize': '20kb', 'imageSize': '336 x 226', 'imageWidth': '336px'})|raw}}</figure>
+                                    <div class="caption">
+                                        {{widget('content', 'whoweare_content', {content: '<p>Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti dapi licdu nt mtsent lusto dolor ltisim comme. Mes cuml dia sed inertio lacus ut eniascet ingerto aliiqt sit eism odictor. Ut ligulate ameti dapibus ticdu nt mtsent dolorltiissim.</p>
+                                        <p>Mes cuml dia sed in lacus ut enia etor ingerto dolore ipsum commete mtsent aliiqt. Es sitet amet eismod ictor ut ligulate ameti dapibusti mtsent lusto dolor ltisim comme. Mes cuml dia sed inertio lacus ut eniascet ingerto.</p>', lines: 'all'})|raw}}                                         
+                                    </div>
+                                </div>
+                            </div>
+                         </article>
+                         <article class="span4">
+
+                            {{widget('content', 'history_title', {content: '<h3>our history</h3>', lines: 'all'})|raw}}
+                            
+                            <ul class="list2">
+                                <li>
+                                    <div class="date">{{widget('content', 'history_1_time', {content: '<time datetime="2013-01-01">2003 -  </time>', lines: 'all'})|raw}}</div>
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_1_content', {content: '<p>Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti apilicdu nt mtsent lusto dolor ltisim comme. Mes cuml dia.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date">{{widget('content', 'history_2_time', {content: '<time datetime="2013-01-01">2005 - </time>', lines: 'all'})|raw}}
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_2_content', {content: '<p>Amet eismod ictorut ligulate ameti dapilicdu nt mtsent lusto dolor ltisim comme. Mes cuml dia. sed inertio lacus ut eniascet ingerto.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date">{{widget('content', 'history_3_time', {content: '<time datetime="2013-01-01">2007 - </time>', lines: 'all'})|raw}}
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_3_content', {content: '<p>Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date">{{widget('content', 'history_4_time', {content: '<time datetime="2013-01-01">2009 - </time>', lines: 'all'})|raw}}
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_4_content', {content: '<p>Donec accumsan malesuada orci. Donec sit amet eros. Lorem dolor sit amet, consectetuer adipiscing elit. Mauris fermentum.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date">{{widget('content', 'history_5_time', {content: '<time datetime="2013-01-01">2012 - </time>', lines: 'all'})|raw}}
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_5_content', {content: '<p>Donec sit amet eros. Lorem dolor sit amet, consetetuer adipiscing elit. Mauris fermentum. dictum magna. Sed laoreet aliquam leo.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date">{{widget('content', 'history_6_time', {content: '<time datetime="2013-01-01">2013 - </time>', lines: 'all'})|raw}}
+                                    <div class="extra-wrap">
+                                        {{widget('content', 'history_6_content', {content: '<p>Lorem dolor sit amet, consetetuer adipiscing elit. Mauris fermentum dictum magna.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </li>
+                            </ul>
+                         </article>
+                         <article class="span4">  
+
+                            {{widget('content', 'job_title', {content: '<h3 class="margBot5">job opportunities</h3>', lines: 'all'})|raw}}
+                            {{widget('content', 'job_subtitle', {content: '<h6>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</h6>', lines: 'all'})|raw}}
+                            {{widget('content', 'job_content', {content: '<p>Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. </p>', lines: 'all'})|raw}}
+                            <ul class="list1">
+                                <li><a href="#">OMNIS ISTEt ERRORPTAT</a></li>
+                                <li><a href="#">EM ACCUSANTIUM DOLOR</a></li>
+                                <li><a href="#">EMQUE LAUDANTIUM TOTAM</a></li>
+                                <li><a href="#">EMEAQUE IPSA QUAE ABILLI</a></li>
+                                <li><a href="#">Aenean nonummy hendrerit</a></li>
+                                <li><a href="#">mauris Phasellus porta</a></li>
+                            </ul>
+                            {{widget('content', 'job_contentafter', {content: '<p>Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque pens et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem.</p>', lines: 'all'})|raw}}
+                         </article>
+                     </div>
+             </section>
+             <section class="span12 margBot">                
+                {{widget('content', 'professionals_title', {content: '<h3>the best of professionals</h3>', lines: 'all'})|raw}}
+                <div class="row">
+                    <article class="span3 box-thumb1 maxheight">
+                        <div class="thumb-pad2">
+                            <div class="thumbnail">
+                                <figure><img src="img/page2_pic2.jpg" alt=""></figure>
+                                <div class="caption">
+                                    {{widget('content', 'professionals_1_name', {content: '<a href="#">Mark Johnson</a>', lines: 'all'})|raw}}
+                                    {{widget('content', 'professionals_1_content', {content: '<p>Morbi tempor quam vel massa adipiscing ute cursuscu  pelle ntesque nisel. Veliter comte modo velultrice conseq.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                    <article class="span3 box-thumb1 maxheight">
+                        <div class="thumb-pad2">
+                            <div class="thumbnail">
+                                <figure><img src="img/page2_pic3.jpg" alt=""></figure>
+                                <div class="caption">
+                                    {{widget('content', 'professionals_2_name', {content: '<a href="#">Bradley Grosh</a>', lines: 'all'})|raw}}
+                                    {{widget('content', 'professionals_2_content', {content: '<p>Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                    <article class="span3 box-thumb1 maxheight">
+                        <div class="thumb-pad2">
+                            <div class="thumbnail">
+                                <figure><img src="img/page2_pic4.jpg" alt=""></figure>
+                                <div class="caption">
+                                    {{widget('content', 'professionals_3_name', {content: '<a href="#">Patrick Pool</a>', lines: 'all'})|raw}}
+                                    {{widget('content', 'professionals_3_content', {content: '<p>Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                    <article class="span3 box-thumb1 maxheight">
+                        <div class="thumb-pad2">
+                            <div class="thumbnail">
+                                <figure><img src="img/page2_pic5.jpg" alt=""></figure>
+                                <div class="caption">
+                                    {{widget('content', 'professionals_4_name', {content: '<a href="#">John McCoist</a>', lines: 'all'})|raw}}
+                                    {{widget('content', 'professionals_4_content', {content: '<p>Aenean nonu hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </div>
+                        </div>
+                    </article> 
+                </div>
+             </section>
+             <section class="span12">
+                <div class="row">
+                    <article class="span4">
+                        {{widget('content', 'advantages_title', {content: '<h3>advantages</h3>', lines: 'all'})|raw}}
+                        <ul class="list3">
+                            <li>
+                                <div class="icon"><img src="img/page2_icon1.png" alt=""></div>
+                                <div class="extra-wrap">
+                                    {{widget('content', 'advantages_1_content', {content: '<p>Morbi tempor quam vel massa adipiscing ute cursuscu  pelle ntesque nisel. Veliter comte modo velultrice conseq.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon"><img src="img/page2_icon2.png" alt=""></div>
+                                <div class="extra-wrap">
+                                    {{widget('content', 'advantages_2_content', {content: '<p>Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon"><img src="img/page2_icon3.png" alt=""></div>
+                                <div class="extra-wrap">
+                                    {{widget('content', 'advantages_3_content', {content: '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pelleesque sed dolor. Aliquam congue fermentum nisl.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="span3">
+                        {{widget('content', 'skills_title', {content: '<h3 class="margBot6">skills</h3>', lines: 'all'})|raw}}                        
+                        {{widget('content', 'skills_content', {content: ' <p>Morbi tempor quam vel massa adipiscing ute cursuscu  pelle ntesque nisel. Veliter comte modo velultrice conseq.</p> ', lines: 'all'})|raw}}
+                        <ul class="list1">
+                            <li><a href="#">OMNIS ISTEt ERRORPTAT</a></li>
+                            <li><a href="#">EM ACCUSANTIUM DOLOR</a></li>
+                            <li><a href="#">EMQUE LAUDANTIUM TOTAM</a></li>
+                            <li><a href="#">EMEAQUE IPSA QUAE ABILLI</a></li>
+                            <li><a href="#">Aenean nonummy hendrerit</a></li>
+                            <li><a href="#">mauris Phasellus porta</a></li>
+                        </ul>
+                    </article>
+                    <article class="span5">                        
+                        {{widget('content', 'expert', {content: '<h3>expert advice</h3>', lines: 'all'})|raw}}
+                        <div class="thumb-pad7">
+                            <div class="thumbnail">
+                                <figure><img src="img/page2_pic6.jpg" alt=""></figure>
+                                <div class="caption">
+                                    {{widget('content', 'expert_name', {content: '<h6>Jessica Priston:</h6>', lines: 'all'})|raw}}
+                                    {{widget('content', 'expert_content', {content: '<p>&Prime;Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                                    <p>Et ultrices pre cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit magna, hendrerit sit amet, tincidunt ac...&Prime;</p>', lines: 'all'})|raw}}
+                                    <div class="name">
+                                        {{widget('content', 'expert_position', {content: '<p>Jessica Priston</p><span>Manager, NYC</span>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                      {{zone('main')|raw}}
+                    </article>
+                </div>
+             </section>
+         </div>
+    </div>
+</div>
+
+    <footer>
+      <div class="container clearfix">
+        {{widget('socialicons', 'socialicons', {
+        'googleplus': 'https://plus.google.com/101946323226233111530', 
+        'facebook': 'https://www.facebook.com/TeamBaseKit', 
+        'twitter': 'https://twitter.com/basekit', 
+        'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+        <div class="privacy pull-left"><strong>Michael Peterson</strong> &copy; 2012 | <a href="index-5.html">Privacy Policy</a>&nbsp;</div>
+      </div>
+    </footer>  </div>
+
+  {% endblock %}

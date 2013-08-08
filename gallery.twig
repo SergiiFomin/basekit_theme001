@@ -1,0 +1,154 @@
+{% extends "layout.twig" %}
+
+  {% block content %}
+
+  <div class="global"> 
+    <header>
+        <div class="container">
+             <div class="navbar navbar_ clearfix">
+                <div class="navbar-inner">      
+                      <div class="clearfix">
+                            <h1 class="brand">{{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}</h1>
+                            <div class="nav-collapse nav-collapse_ collapse">
+                              {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+                            </div>                                                                                                                
+                      </div>
+                 </div>  
+             </div>
+        </div>        
+    </header>
+
+    <div class="container padBot">
+        <div class="row">
+            <section class="span12">
+                {{widget('content', 'projects_title', {content: ' <h3 class="margBot3">featured projects</h3> ', lines: 'all'})|raw}}
+                
+                    <div class="row">
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img1.jpg"><img src="img/page3_pic1.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_1_name', {content: '<a href="#">project name #1</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_1_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img2.jpg"><img src="img/page3_pic2.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_2_name', {content: '<a href="#">project name #2</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_2_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img3.jpg"><img src="img/page3_pic3.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_3_name', {content: '<a href="#">project name #3</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_3_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img4.jpg"><img src="img/page3_pic4.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_4_name', {content: '<a href="#">project name #4</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_4_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img5.jpg"><img src="img/page3_pic5.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_5_name', {content: '<a href="#">project name #5</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_5_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img6.jpg"><img src="img/page3_pic6.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_6_name', {content: '<a href="#">project name #6</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_6_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img7.jpg"><img src="img/page3_pic7.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_7_name', {content: '<a href="#">project name #7</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_7_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                         <article class="span4 box4">
+                            <div class="thumb-pad8 maxheight">
+                                <div class="thumbnail">
+                                    <figure><a href="img/img8.jpg"><img src="img/page3_pic8.jpg" alt=""></a></figure>
+                                    <div class="caption">
+                                        {{widget('content', 'projects_8_name', {content: '<a href="#">project name #8</a>', lines: 'all'})|raw}}
+                                        {{widget('content', 'projects_8_content', {content: '<p>Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.</p>', lines: 'all'})|raw}}
+                                    </div>
+                                </div>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                         </article>
+                     </div>
+             </section>
+             <section>
+               <article>
+                      {{zone('main')|raw}}
+                    </article>
+             </section>
+         </div>
+    </div>
+</div>
+
+
+    <footer>
+      <div class="container clearfix">
+        {{widget('socialicons', 'socialicons', {
+        'googleplus': 'https://plus.google.com/101946323226233111530', 
+        'facebook': 'https://www.facebook.com/TeamBaseKit', 
+        'twitter': 'https://twitter.com/basekit', 
+        'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+        <div class="privacy pull-left"><strong>Michael Peterson</strong> &copy; 2012 | <a href="index-5.html">Privacy Policy</a>&nbsp;</div>
+      </div>
+    </footer>  </div>
+
+  {% endblock %}

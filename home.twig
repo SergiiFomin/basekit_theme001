@@ -1,0 +1,199 @@
+{% extends "layout.twig" %}
+
+  {% block content %}
+
+  <div class="global"> 
+    <header>
+        <div class="container">
+             <div class="navbar navbar_ clearfix">
+                <div class="navbar-inner">      
+                      <div class="clearfix">
+                            <h1 class="brand">{{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}</h1>
+                            <div class="nav-collapse nav-collapse_ collapse">
+                              {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+                            </div>                                                                                                                
+                      </div>
+                 </div>  
+             </div>
+        </div>
+        
+    </header>
+
+    <div id="slider">
+        <div id="flexslider">
+
+            {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': 'true', 'showBullets': 'false', 'allowPause': 'true', 'allowLoop': 'true', 'images':[
+                {'imageHeight':'504', 'imageWidth':'1950', 'url':asset('/images/picture1'), 'title':'test title', 'description': 'test desc'},
+                {'imageHeight':'504', 'imageWidth':'1950', 'url':asset('/images/picture2'), 'title':'test title', 'description': 'test desc'},
+                {'imageHeight':'504', 'imageWidth':'1950', 'url':asset('/images/picture3'), 'title':'test title', 'description': 'test desc'}
+            ]})|raw}}
+
+        </div>
+    </div>      
+
+    <!--content-->
+    <div class="container padBot">
+        <div class="row">
+             <section class="span12 border1">
+                <div class="row">
+                    <article class="span7">
+                        {{widget('content', 'welcome_title', {content: '<h2><span>Welcome to our site</span></h2>', lines: 'all'})|raw}}                        
+                        {{widget('content', 'welcome_subtitle', {content: '<h4>we are one of the largest providers of the leading investment strategies.</h4>', lines: 'all'})|raw}}
+                        {{widget('content', 'welcome_content', {content: '<p class="margBot">Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti dapi licdu nt mtsent lusto dolor ltisim comme. Mes cuml dia sed inertio lacus ut eniascet ingerto aliiqt sit eism odictor. Ut ligulate ameti dapibus ticdu nt mtsent dolorltiissim.Mes cuml dia sed in lacus ut enia etor ingerto dolore ipsum commete mtsent aliiqt. Es sitet amet eismod ictor ut ligulate ameti dapibusti mtsent lusto dolor ltisim comme. Mes cuml dia sed inertio lacus ut eniascet ingerto.</p>', lines: 'all'})|raw}}
+                        {{widget('button', 'welcome_button', {italic: true, text:'Read More', 'align':'widget-align-center', 'url':'#'})|raw}}
+                    </article>
+                    <article class="span5">                        
+                        {{widget('content', 'services_title', {content: '<h3>featured services</h3>', lines: 'all'})|raw}}  
+                        <ul class="list5">
+                            <li>
+
+                                <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page1_pic1.jpg'), 'alt': 'page1_pic1', 'fileName': 'page1_pic1.jpg', 'fileSize': '28kb', 'imageSize': '76 x 76', 'imageWidth': '76px'})|raw}}</figure>
+
+                                <div class="extra-wrap">
+                                    {{widget('content', 'services_1_title', {content: '<a href="#">investment consulting</a>', lines: 'all'})|raw}}     
+                                    {{widget('content', 'services_1_content', {content: '<p>Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti dapibu licdu nut.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                            <li>
+                                <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page1_pic2.jpg'), 'alt': 'page1_pic2', 'fileName': 'page1_pic2.jpg', 'fileSize': '28kb', 'imageSize': '76 x 76', 'imageWidth': '76px'})|raw}}</figure>
+                                <div class="extra-wrap">
+                                    {{widget('content', 'services_2_title', {content: '<a href="#">business analytics</a>', lines: 'all'})|raw}}     
+                                    {{widget('content', 'services_2_content', {content: '<p>Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti dapibu licdu nut.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                            <li>
+                                <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page1_pic3.jpg'), 'alt': 'page1_pic3', 'fileName': 'page1_pic3.jpg', 'fileSize': '28kb', 'imageSize': '76 x 76', 'imageWidth': '76px'})|raw}}</figure>
+                                <div class="extra-wrap">
+                                    {{widget('content', 'services_3_title', {content: '<a href="#">broker comparison</a>', lines: 'all'})|raw}}     
+                                    {{widget('content', 'services_3_content', {content: '<p>Mes cuml dia sed in lacus ut eniascet etor ingerto aliiqt es sitet amet eismod ictorut ligulate ameti dapibu licdu nut.</p>', lines: 'all'})|raw}}
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+             </section>
+             <article class="span12 slogan">
+                <div class="clearfix">
+                    {{widget('content', 'business_title', {content: '<h2>Progressive business thinking</h2>', lines: 'all'})|raw}} 
+                    {{widget('content', 'business_subtitle', {content: '<h5><span>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit Donec quis.</span></h5>', lines: 'all'})|raw}}                 
+                </div>
+                {{widget('button', 'welcome_button', {italic: true, text:'Hire US!', 'align':'widget-align-center', 'url':'#'})|raw}}
+             </article>
+             <section class="span12">
+                <div class="row">
+                    <article class="span8">
+                        {{widget('content', 'recent_title', {content: '<h3>Recent Posts</h3>', lines: 'all'})|raw}} 
+                        <div class="row">
+                            <div class="thumb-pad6 span4">
+                                <div class="thumbnail">
+                                    <figure><div class="badge"><time datetime="2013-01-01">21</time><p>APR</p></div>
+                                        {{widget('image', 'services_1_image', { 'src': asset('images/page1_pic4.jpg'), 'alt': 'page1_pic4', 'fileName': 'page1_pic4.jpg', 'fileSize': '18kb', 'imageSize': '364 x 171', 'imageWidth': '367px'})|raw}}
+                                    </figure>
+                                    <div class="caption">
+                                        {{widget('content', 'recent_1_link', {content: '<a href="#">massa Dolore Ipsum veliter</a>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'recent_1_title', {content: '<h6>posted by jack moose</h6>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'recent_1_content', {content: '<p>Morbi tempor quam vel massa adipiscing ute cursuscongu  pelle ntesque nisel. Veliter comte modo velultrice conseq.</p>', lines: 'all'})|raw}} 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumb-pad6 span4">
+                                <div class="thumbnail">
+                                    <figure><div class="badge"><time datetime="2013-01-01">21</time><p>APR</p></div>
+                                        {{widget('image', 'services_1_image', { 'src': asset('images/page1_pic5.jpg'), 'alt': 'page1_pic5', 'fileName': 'page1_pic5.jpg', 'fileSize': '18kb', 'imageSize': '364 x 171', 'imageWidth': '367px'})|raw}}
+                                    </figure>
+                                    <div class="caption">
+                                        {{widget('content', 'recent_2_link', {content: '<a href="#">massa Dolore Ipsum veliter</a>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'recent_2_title', {content: '<h6>posted by jack moose</h6>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'recent_2_content', {content: '<p>Morbi tempor quam vel massa adipiscing ute cursuscongu  pelle ntesque nisel. Veliter comte modo velultrice conseq.</p>', lines: 'all'})|raw}} 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="span4 testim-box">                        
+                        {{widget('content', 'testimonials', {content: '<h3>Testimonials</h3>', lines: 'all'})|raw}} 
+                        <div class="list_carousel responsive clearfix">
+                            <ul id="foo">
+                                <li>
+                                    <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page1_pic6.jpg'), 'alt': 'page1_pic6', 'fileName': 'page1_pic6.jpg', 'fileSize': '18kb', 'imageSize': '98 x 98', 'imageWidth': '98px'})|raw}}</figure>
+                                    <div class="caption">
+                                        {{widget('content', 'testim_1_title', {content: '<h5>Lora Mendol</h5>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'testim_1_subtitle', {content: '<h6>chromo org</h6>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'testim_1_content', {content: '<p>Morbi tempor quam vel massa adipiscing ute cursus.</p>', lines: 'all'})|raw}} 
+                                    </div>                                    
+                                    {{widget('content', 'testim_1_content_after', {content: '<p>Morbi tempor quam vel massa adipiscing cursus mi congue pelle ntesque nisel. Veliter comtmodo velultrices vel ipsum conseq.</p>', lines: 'all'})|raw}} 
+                                </li>
+                                <li>
+                                    <figure>{{widget('image', 'services_1_image', { 'src': asset('images/page1_pic7.jpg'), 'alt': 'page1_pic7', 'fileName': 'page1_pic7.jpg', 'fileSize': '18kb', 'imageSize': '98 x 98', 'imageWidth': '98px'})|raw}}</figure>
+                                    <div class="caption">
+                                        {{widget('content', 'testim_2_title', {content: '<h5>Jack Moose</h5>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'testim_2_subtitle', {content: '<h6>chromo org</h6>', lines: 'all'})|raw}} 
+                                        {{widget('content', 'testim_2_content', {content: '<p>Nam tempor quam vel massa adipiscing ute cursus.</p>', lines: 'all'})|raw}} 
+                                    </div>                                    
+                                    {{widget('content', 'testim_1_content_after', {content: '<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque.</p>', lines: 'all'})|raw}} 
+                                </li>
+                            </ul>
+                            <a id="prev" class="prev" href="#"></a>
+                            <a id="next" class="next" href="#"></a>
+                        </div>
+                    </article>
+                    <article>
+                      {{zone('main')|raw}}
+                    </article>
+                </div>
+             </section>
+         </div>
+     </div>
+</div>
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <section class="span12 border2">
+                <div class="row">
+                    <article class="span3 info-box">
+                        {{widget('content', 'infobox_1_title', {content: '<h5 class="margBot1"><em>LATEST PROJECTS</em></h5>', lines: 'all'})|raw}} 
+                        <ul class="list1">
+                            <li><a href="#">Amet consectetuer adipis</a></li>
+                            <li><a href="#">Euismod tincidunt utla</a></li>
+                            <li><a href="#">Nostd exerci tationua</a></li>
+                            <li><a href="#">Morbi tempor quam mas</a></li>
+                        </ul>
+                    </article>
+                    <article class="span3 info-box">
+                        {{widget('content', 'infobox_2_title', {content: '<h5 class="margBot1"><em>USEFUL LINKS</em></h5>', lines: 'all'})|raw}} 
+                        <ul class="list1">
+                            <li><a href="#">OMNIS ISTEt ERRORPTAT</a></li>
+                            <li><a href="#">EM ACCUSANTIUM DOLOR</a></li>
+                            <li><a href="#">EMQUE LAUDANTIUM TOTAM</a></li>
+                            <li><a href="#">EMEAQUE IPSA QUAE ABILL</a></li>
+                        </ul>
+                    </article>
+                    <article class="span3 info-box">
+                        {{widget('content', 'infobox_3_title', {content: '<h5 class="margBot1"><em>From the blog</em></h5>', lines: 'all'})|raw}} 
+                        <ul class="list1">
+                            <li><a href="#">LOREM IPSUM DOLOR</a></li>
+                            <li><a href="#">CONSECTETUR</a></li>
+                            <li><a href="#">ADIPISICING</a></li>
+                            <li><a href="#">SED DO EIUSMOD</a></li>
+                        </ul>
+                    </article>
+                    <article class="span3 follow-box">
+                        {{widget('content', 'infobox_4_title', {content: '<h5><em>follow us</em></h5>', lines: 'all'})|raw}} 
+                        <ul class="follow_icon">
+                            <li><a href="#"><img src="img/follow_icon1.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/follow_icon2.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/follow_icon3.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/follow_icon4.png" alt=""></a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="span12">
+                <p><span>GOwall</span>&copy; 2013 | <a href="index-5.html">Privacy Policy</a></p>
+            </section>
+        </div>
+    </div>   
+</footer>
+  {% endblock %}
