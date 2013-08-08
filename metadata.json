@@ -1,10 +1,7 @@
 {
   "name":"theme000",
   "thumbnail":"pearl.png",
-  "screenshot":"pearl.png",
-    "pageTypes":["home, about, contact, gallery"],  
-    "defaultColorSwatch":"Swatch 1",
-    "defaultFontSwatch":"Raleway",
+  "screenshot":"pearl.png",    
     "colorSwatches":
     {
         "Swatch 1": {
